@@ -92,9 +92,6 @@ form button:hover{
     justify-content: space-between;
     align-items: center;
     transition: all 0.5 ease;
-}
-
-.main-todo-element-wrapper-text {
     padding-left: 2rem;
 }
 
@@ -132,4 +129,8 @@ form button:hover{
 .checked {
     text-decoration: line-through;
     color: grey;
+}
+
+i {
+    pointer-events: none;
 }

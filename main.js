@@ -12,13 +12,13 @@ function addTodoElement(event) {
 
     // create  new <div>
     var todoDiv = document.createElement("div");
-    todoDiv.classList.add("main-todo-element-wrapper");
+    todoDiv.classList.add("main-todo-element-wrapper-text");
 
     // create new <li>
     var todoLi = document.createElement("li");
     todoLi.innerText = todoInput.value;
-    todoLi.classList.add("main-todo-element-wrapper-text")
-    todoDiv.appendChild(todoLi);
+    todoLi.classList.add("main-todo-element-wrapper")
+    todoLi.appendChild(todoDiv);
     
     // create delete button
     var todoButtonDelete = document.createElement("button");
@@ -35,7 +35,7 @@ function addTodoElement(event) {
     todoDiv.appendChild(todoButtonCheck);
 
     // add <div> to <ul>
-    todoList.appendChild(todoDiv);
+    todoList.appendChild(todoLi);
     todoInput.value = "";
 }
 
@@ -47,6 +47,8 @@ function deleteElement(e) {
 
 // function "checkElement"
 function checkElement(evt) {
+    console.log("check");
     let cibleCheck = evt.target.parentNode.parentNode;
+    console.log(cibleCheck);
     cibleCheck.classList.add("checked");
 }
